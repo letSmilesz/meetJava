@@ -1,24 +1,29 @@
 import java.time.LocalTime;
 import java.util.Scanner;
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
-    }
-}
+    static Scanner scanner = new Scanner(System.in);
 
-class task1 { //написать "Привет, имя"
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("Write number of task(to exit write 0): ");
+            int task = scanner.nextInt();
+            scanner.nextLine();
+            if (task == 0) {
+                scanner.close();
+                break;
+            } else if (task == 1) task1();
+            else if (task == 2) task2();
+            else if (task == 3) task3();
+        }
+    }
+
+    public static void task1() {
         System.out.println("Write your name: ");
         String name = scanner.nextLine();
         System.out.println("Hello, " + name + "!");
-        scanner.close();
     }
-}
 
-class task2 { //написать время суток, имя
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void task2() {
         System.out.println("Write your name: ");
         String name = scanner.nextLine();
         String timesOfDay = "night";
@@ -31,17 +36,13 @@ class task2 { //написать время суток, имя
             timesOfDay = "evening";
         }
         System.out.println("Good " + timesOfDay + ", " + name);
-        scanner.close();
     }
-}
 
-class task3 { //найти в массиве самую длинную последовательность единиц
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void task3() {
         System.out.println("Write length of array: ");
         int[] numbers = new int[10];//scanner.nextInt()];
         for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = (int)(Math.random() * 2);
+            numbers[i] = (int) (Math.random() * 2);
         }
         int max_length = 0;
         int count = 0;
@@ -56,8 +57,9 @@ class task3 { //найти в массиве самую длинную посл�
         printArray(numbers);
         System.out.println("Max length of number '1': " + max_length);
     }
-    public static void printArray(int[] array) {
-        for (int item: array) {
+
+    static void printArray(int[] array) {
+        for (int item : array) {
             System.out.printf("%d, ", item);
         }
         System.out.println();
