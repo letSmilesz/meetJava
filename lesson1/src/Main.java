@@ -15,6 +15,7 @@ public class Main {
             else if (task == 2) task2();
             else if (task == 3) task3();
             else if (task == 4) task4();
+            else if (task == 5) task5();
         }
     }
 
@@ -41,7 +42,8 @@ public class Main {
 
     public static void task3() { //посчитать максимальное количесво единиц подряд
         System.out.println("Write length of array: ");
-        int[] numbers = new int[10];//scanner.nextInt()];
+        int[] numbers = scanner.nextInt()];
+        scanner.nextLine();
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = (int) (Math.random() * 2);
         }
