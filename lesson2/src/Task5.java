@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 public class Task5 {
     static Logger logger = Logger.getAnonymousLogger();
     public static void main(String[] args) {
-        File directory = new File("D:/Code/MeetJava/lesson2");
+        File directory = new File("./");
         ArrayList<String> allFiles = checkDirectory(directory, new ArrayList<>(), 0);
         listToFile(allFiles);
 

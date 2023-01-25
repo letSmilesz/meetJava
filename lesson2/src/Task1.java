@@ -1,8 +1,7 @@
-import java.util.Random;
 import java.util.Scanner;
 
-public class task1 {
-    static Scanner scanner = new Scanner(System.in);
+public class Task1 {
+    static Scanner scanner = Main.scanner;
     public static void main(String[] args) {
         System.out.println("Write length of string: ");
         int n = scanner.nextInt();
